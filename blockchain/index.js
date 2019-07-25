@@ -14,7 +14,9 @@ class Blockchain {
   }
 
   isValidChain(chain) {
-    if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) {
+    let genesisBlock = JSON.stringify(Block.genesis())
+    let chainFirstBlock = JSON.stringify(chain[0])
+    if (chainFirstBlock !== genesisBlock) {
       return false
     }
 

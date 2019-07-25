@@ -55,4 +55,5 @@ describe('Blockchain', () => {
 
     expect(bc.chain).not.toEqual(bc2.chain)
   })
+
 })
